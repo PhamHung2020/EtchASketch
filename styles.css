@@ -1,3 +1,7 @@
+/* ------------------------------------ */
+/* ------------- SET UP ----------------*/
+/* ------------------------------------ */
+
 html{
     margin: 0;
     padding: 0;
@@ -6,17 +10,64 @@ html{
 
 body{
     background-color: burlywood;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     text-align: center;
 }
+
+/* ------------------------------------ */
+/* ------------- HEADER ----------------*/
+/* ------------------------------------ */
+
+header h1{
+    color: aquamarine;
+    font-size: 300%;
+}
+
+/* ------------------------------------- */
+/* ------------- OPTIONS ----------------*/
+/* ------------------------------------- */
+
+.option{
+    display: flex;
+    justify-content: space-around;
+    max-width: 35%;
+    margin: 0 auto;
+}
+
+.btn{
+    background-color: rgb(37, 121, 93);
+    color: white;
+    font-size: 22px;
+    border: 1px solid aqua;
+    border-radius: 5px;
+    padding: 10px 10px;
+    transition: 0.02s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 3px 5px white, -1px -2px 5px white;
+}
+
+input[type=number]{
+    height: 90%;
+    font-size: 22px;
+    border: 2px solid aqua;
+    margin-left: 5px;
+}
+
+/* ------------------------------------ */
+/* ------------- GRID ----------------*/
+/* ------------------------------------ */
 
 .container{
     display: grid;
     max-width: 480px;
     min-height: 480px;
     background-color: cornsilk;
-    margin: 0 auto;
+    margin: 20px auto;
     border: 2px solid black;
 }
 
