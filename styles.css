@@ -1,0 +1,26 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: burlywood;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    max-width: 480px;
+    min-height: 480px;
+    background-color: cornsilk;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.container-element{
+    background-color: white;
+    border: 1px solid black;
+}
