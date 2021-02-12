@@ -1,4 +1,13 @@
 const container = document.querySelector('.container');
+const colors = ['red', 'orange', 'green', 'blue', 'grey', 'aqua', 'violet', 'pink', 'yellow', 'brown', 'darkgoldenrod', 'lightgreen', 'chocolate', 'cadetblue', 'darkkhaki', 'fuchsia'];
+
+
+function changeBackgroundColor(node)
+{
+    let randomNumber = Math.floor(Math.random() * 16);
+    node.style['background-color'] = colors[randomNumber];
+}
+
 
 function clearGrid()
 {
@@ -14,6 +23,10 @@ function createGrid(num) {
     for (let i = 0; i < num * num; ++i) {
         let div = document.createElement('div');
         div.classList.add('container-element');
+        div.addEventListener('mouseover', () => 
+        {
+            changeBackgroundColor(div);
+        })
         container.appendChild(div);
     }
 }
