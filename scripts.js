@@ -4,10 +4,15 @@ const colors = ['red', 'orange', 'green', 'blue', 'grey', 'aqua', 'violet', 'pin
 
 function changeBackgroundColor(node)
 {
-    let randomNumber = Math.floor(Math.random() * 16);
-    node.style['background-color'] = colors[randomNumber];
+    let colorNum = Math.floor(Math.random() * 16);
+    node.style['background-color'] = colors[colorNum];
 }
 
+
+function resetGrid()
+{
+    container.childNodes.forEach((node) => node.style['background-color'] = 'white');
+}
 
 function clearGrid()
 {
@@ -37,8 +42,13 @@ document.querySelector('#changeSizeButton').addEventListener('click', () =>
 {
     const input = document.querySelector('input');
     let num = Number(input.value);
-    if (num < 1 || num > 64) return;
-    console.log(num);
+    if (num < 1 || num > 64 || num == Math.sqrt(container.childElementCount)) return;
+    console.log(container.childElementCount);
     clearGrid();
     createGrid(num);
+})
+
+document.querySelector('#resetButton').addEventListener('click', () => 
+{
+    resetGrid();
 })
