@@ -52,3 +52,11 @@ document.querySelector('#resetButton').addEventListener('click', () =>
 {
     resetGrid();
 })
+
+window.addEventListener('keydown', function (e) 
+{
+    if (e.key == 'Enter')
+    {
+        document.querySelector('#changeSizeButton').click();
+    }
+})
